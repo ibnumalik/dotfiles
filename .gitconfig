@@ -1,0 +1,60 @@
+[core]
+#	autocrlf = true
+	excludesfile = C:\\Users\\ibnumalik\\Documents\\gitignore_global.txt
+	editor = vi
+	whitespace = warn
+	autocrlf = input #linux only
+    fileMode = false
+[color]
+    ui = auto
+[color "status"]
+	changed = yellow bold
+    added = green bold
+[color "branch"]
+    current = green bold
+    local = yellow bold
+    remote = cyan bold
+[help]
+	autocorrect = 3
+[init]
+	templatedir = '~/.git-templates'
+[user]
+	name = Shaiful Aiman Malik
+	email = ibnumalik@tbd.my
+[commit]
+	template = ~/.git-commit-template
+[mergetool]
+    keepBackup = false
+[log]
+	mailmap = true
+[mailmap]
+    file = ~/.mailmap
+[alias]
+    alias = config --get-regexp ^alias\\.
+    a = add -p
+    ai = add -i
+    b = branch
+    ba = branch -a
+    bd = branch -d
+    c = commit
+    s = status
+    ##############
+    ck = checkout
+    new = checkout -b
+    pl = pull --rebase
+    ##############
+    stats = shortlog --all -sn --no-merges
+    ##############
+    history = log --no-merges --pretty=format:'%Cred%h%Creset %Cgreen(%<(10,trunc)%cr) %C(bold blue)<%aN>%Creset - %s' --abbrev-commit --date=relative
+    ulog = log --all --oneline --graph --decorate
+    ulogthis = log --oneline --graph --decorate
+    logall = log --all --no-merges --pretty=format:'%Cred%h%Creset - %s'
+    logthis = log --no-merges --pretty=format:'%Cred%h%Creset - %s'
+    recap = log --all --author=ibnumalik@tbd.my --no-merges --pretty=format:'%Cred%h%Creset - %s'
+    today = log --all --author=ibnumalik@tbd.my --no-merges --oneline --since=00:00:00
+    this-week = log --all --author=ibnumalik@tbd.my --no-merges --oneline --since=last-monday --until=\"now\"
+    l1 = log --oneline
+    l1nm = log --oneline --no-merges
+    report = log --all --no-merges --author=ibnumalik@tbd.my --pretty=format:'%h %x09 %cd %x09 %s' --date=short
+[merge]
+	conflictstyle = diff3
