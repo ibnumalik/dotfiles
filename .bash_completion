@@ -1,0 +1,8 @@
+# https://serverfault.com/questions/506612/standard-place-for-user-defined-bash-completion-d-scripts
+
+for bcfile in ~/.bash_completion.d/* ; do
+    [ -f "$bcfile" ] && . $bcfile
+done
+
+# Add tab auto-completion for composer
+source /home/ibnumalik/.config/composer/vendor/stecman/composer-bash-completion-plugin/hooks/bash-completion
