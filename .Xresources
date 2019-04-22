@@ -1,0 +1,16 @@
+! Perl extension config
+URxvt.perl-ext-common: default,matcher
+URxvt.perl-ext: tabbed
+URxvt.url-launcher: /usr/bin/xdg-open
+URxvt.matcher.button: 1
+
+! Any scripts placed here will override global ones with the same name
+URxvt.perl-lib: /home/ibnumalik/.urxvt/
+
+! Tabbed extension configuration
+URxvt.tabbed.tabbar-fg: 2
+URxvt.tabbed.tabbar-bg: 0
+URxvt.tabbed.tab-fg: 5
+URxvt.tabbed.tab-bg: 0
+URxvt.tabbed.tab-numbers: false
+URxvt.tabbed.new-button: false
