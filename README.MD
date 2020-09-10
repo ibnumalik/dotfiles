@@ -61,6 +61,23 @@ The shortcut that is defined in the config files. If the list is growing, maybe 
     - reload config file: `prefix` then, <kbd>r</kbd>
     - edit config file at right side: `prefix` then, <kbd>M</kbd>
 
+## vim
+
+Vim is a highly configurable text editor built to make creating and changing any kind of text very efficient. It is included as "vi" with most UNIX systems and with Apple OS X.
+
+### vim vundle
+
+vim vundle is vim plugin manager.
+
+Install vundle:
+
+1. Clone
+
+    ```
+    git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+    ```
+2. Launch vim and run `:PluginInstall`
+
 ## General recommendations
 
 1. Use zsh and oh-my-zsh for easy theming and autocomplete.
