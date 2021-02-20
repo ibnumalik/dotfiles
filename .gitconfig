@@ -1,64 +1,86 @@
+[user]
+    name = Shaiful Aiman Malik
+    email = ibnumalikmy@gmail.com
+
 [core]
-#	autocrlf = true
-	excludesfile = C:\\Users\\ibnumalik\\Documents\\gitignore_global.txt
-	editor = vi
-	whitespace = warn
-	autocrlf = input #linux only
-    fileMode = false
+    # Tell Git to convert CRLF to LF on commit but not the other way around by setting core.autocrlf to input.
+    autocrlf = input
+    # Check if converting CRLF is reversible when end-of-line conversion is active. Set to `warn` to output warrning about an irreversible conversion but continue the operation.
+    safecrlf = warn
+    editor = vim
+    # --quite or --silent so that the bell is not ringing when attempting to scroll past the end of the file.
+    pager = less -q
+
+[credential]
+	helper = cache --timeout=3600
+
+# https://git-scm.com/docs/git-config#Documentation/git-config.txt-color
 [color]
-    ui = auto
+  diff = auto
+  status = auto
+  branch = auto
+  interactive = auto
+  ui = true
+  pager = true
+
+# https://git-scm.com/docs/git-config#Documentation/git-config.txt-colorstatusltslotgt
 [color "status"]
 	changed = yellow bold
     added = green bold
+
+# https://git-scm.com/docs/git-config#Documentation/git-config.txt-colorbranchltslotgt
 [color "branch"]
     current = green bold
     local = yellow bold
     remote = cyan bold
+
 [help]
-	autocorrect = 3
+	autocorrect = 0
+
 [init]
 	defaultBranch = master
-#	templatedir = '~/.git-templates'
-[user]
-	name = Shaiful Aiman Malik
-	email = ibnumalik@tbd.my
+    #templatedir = '~/.git-templates'
+
 [commit]
-	template = ~/.git-commit-template
-[mergetool]
-    keepBackup = false
-[log]
-	mailmap = true
+	template = ~/scripts/.git-commit-template
+
 [mailmap]
-    file = ~/.mailmap
+    file = ~/scripts/.mailmap
+    changed = yellow
+
 [alias]
     alias = config --get-regexp ^alias\\.
-    a = add -p
-    ai = add -i
-    b = branch
-    ba = branch -a
-    bd = branch -d
-    c = commit
     s = status
+    ss = status --short
     ##############
     ck = checkout
     new = checkout -b
+	f = fetch -p
     pl = pull --rebase
-    fp = fetch --prune
     ##############
     stats = shortlog --all -sn --no-merges
     ##############
-    history = log --no-merges --pretty=format:'%Cred%h%Creset %Cgreen(%<(10,trunc)%cr) %C(bold blue)<%aN>%Creset - %s' --abbrev-commit --date=relative
-    ulog = log --all --oneline --graph --decorate
-    ulogthis = log --oneline --graph --decorate
-    logall = log --all --no-merges --pretty=format:'%Cred%h%Creset - %s'
-    logthis = log --no-merges --pretty=format:'%Cred%h%Creset - %s'
-    recap = log --all --author=ibnumalik@tbd.my --no-merges --pretty=format:'%Cred%h%Creset - %s'
-    today = log --all --author=ibnumalik@tbd.my --no-merges --oneline --since=00:00:00
-    this-week = log --all --author=ibnumalik@tbd.my --no-merges --oneline --since=last-monday --until=\"now\"
+    glog = log --all --oneline --graph --decorate
+    glogthis = log --oneline --graph --decorate
     l1 = log --oneline
     l1nm = log --oneline --no-merges
-    report = log --all --no-merges --author=ibnumalik@tbd.my --pretty=format:'%h %x09 %cd %x09 %s' --date=short
+    history = log --no-merges --abbrev-commit --date=relative --pretty=format:'%Cred%h%Creset %Cgreen(%<(10,trunc)%cr) %C(bold blue)<%aN>%Creset - %s'
+    logall = log --all --no-merges --pretty=format:'%Cred%h%Creset - %s'
+    logthis = log --no-merges --pretty=format:'%Cred%h%Creset - %s'
+    lg = log --no-merges --pretty=format:'%C(auto)%h - %Cgreen(%<(10,trunc)%cr)%Creset %C(bold blue)[%<(7,trunc)%aN]%Creset %s'
+    logdetail = log --abbrev-commit --pretty=format:'%C(auto)%h - %s %Cgreen(%cr) %C(bold blue)<%aN>%Creset'
+    logsimple = log --no-merges --pretty=format:'%C(auto)%h - %s'
+    # Log my commit
+    recap = log --all --author="ibnumalik@tbd.my" --no-merges --pretty=format:'%Cred%h%Creset - %s'
+    today = log --all --author="ibnumalik@tbd.my" --no-merges --oneline --since=00:00:00
+    this-week = log --all --author="ibnumalik@tbd.my" --no-merges --oneline --since=last-monday --until=\"now\"
+    report = log --all --author="ibnumalik@tbd.my" --no-merges --pretty=format:'%h %x09 %cd %x09 %s' --date=short
+    mylog = log --author="shaiful.malik@myeg.com.my" --no-merges --pretty=format:'%C(auto)%h - %Cgreen(%<(10,trunc)%cr)%Creset %s'
+
 [merge]
 	conflictstyle = diff3
+
 [pull]
-	ff = only
+    # equivalent to git merge --no-ff. will create additional merge commit
+	ff = false
+	rebase = false

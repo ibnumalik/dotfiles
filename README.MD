@@ -1,15 +1,18 @@
 # ibnumalik's dotfiles
 
-Work in progress. Still need to figure out what's the best way to sync the dotfiles. One of the way is to use gnu stow.
+This repo exist to help us synchronize the configuration for our favorite cli app, such as git, tmux and vim. Hopefully this will create a seamless experience when we are reinstalling or moving to other devices. Instead of setting up everything again, we just need to clone this repo and can start doing our work.
 
-## List of dotfiles
+## Usage
 
-1. .vimrc
-2. .gitconfig
-3. .bashrc
-4. .bash_aliases
-5. .bash_completion
+Use `yadm` to manage dotfiles. The reason being is it is easy to setup and the underlying usage is basically just git. So, before we can begin using our dotfiles, kindly install `yadm` so we can just clone it to the machine and use it right away.
 
+### Tips
+
+Clone the repo using ssh url.
+
+```bash
+yadm clone git@github.com:ibnumalik/dotfiles.git
+```
 
 ## tmux
 
@@ -35,7 +38,7 @@ In the config file we are using tmux plugin manager. So, after installing tmux, 
 
 3. Install plugins
 
-    Press `prefix` + <kbd>I</kbd> (capital i, as in Install) to fetch the plugin.    
+    Press `prefix` + <kbd>I</kbd> (capital i, as in Install) to fetch the plugin.
 
 ### List of tmux plugins used
 
@@ -52,7 +55,7 @@ The shortcut that is defined in the config files. If the list is growing, maybe 
 2. Split panes
     - horizontally: `prefix` then, <kbd>|</kbd>
     - vertically: `prefix` then, <kbd>-</kbd>
-  
+
 3. Switching between windows
     - previous window: `prefix` then, <kbd>ctrl</kbd> + <kbd>p</kbd>
     - next window: `prefix` then, <kbd>ctrl</kbd> + <kbd>n</kbd>
@@ -82,3 +85,21 @@ Install vundle:
 
 1. Use zsh and oh-my-zsh for easy theming and autocomplete.
 2. Install autocomplete for `npm`.
+
+## git
+
+This app need to present to give enjoyable working experience.
+
+1. vim
+
+### commit
+
+When commiting, git will use ~/scripts/.git-commit-template
+
+## keyboard
+
+swap <kbd>ctrl</kbd> with <kbd>CapsLk</kbd>.
+
+```bash
+setxkbmap -option ctrl:swapcaps
+```
