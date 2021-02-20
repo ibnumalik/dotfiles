@@ -14,6 +14,28 @@ Clone the repo using ssh url.
 yadm clone git@github.com:ibnumalik/dotfiles.git
 ```
 
+## Fonts
+
+This are the fonts used by our apps.
+
+* SauceCodePro Nerd Font
+* JetBrains Mono
+* Fira Code
+
+## rofi
+
+Rofi, like dmenu, will provide the user with a textual list of options where one or more can be selected. This can either be running an application, selecting a window, or options provided by an external script.
+
+### Usage
+
+```bash
+rofi -show window
+```
+
+### Shortcut
+
+Set global shortcut to <kbd>ctrl</kbd> <kbd>space</kbd>
+
 ## tmux
 
 tmux is a terminal multiplexer. It lets you switch easily between several programs in one terminal, detach them (they keep running in the background) and reattach them to a different terminal.
@@ -81,11 +103,6 @@ Install vundle:
     ```
 2. Launch vim and run `:PluginInstall`
 
-## General recommendations
-
-1. Use zsh and oh-my-zsh for easy theming and autocomplete.
-2. Install autocomplete for `npm`.
-
 ## git
 
 This app need to present to give enjoyable working experience.
@@ -103,3 +120,8 @@ swap <kbd>ctrl</kbd> with <kbd>CapsLk</kbd>.
 ```bash
 setxkbmap -option ctrl:swapcaps
 ```
+
+## General recommendations
+
+1. Use zsh and oh-my-zsh for easy theming and autocomplete.
+2. Install autocomplete for `npm`.
