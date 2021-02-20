@@ -17,6 +17,7 @@
 [help]
 	autocorrect = 3
 [init]
+	defaultBranch = master
 #	templatedir = '~/.git-templates'
 [user]
 	name = Shaiful Aiman Malik
