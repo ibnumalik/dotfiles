@@ -81,6 +81,7 @@
 	conflictstyle = diff3
 
 [pull]
-    # equivalent to git merge --no-ff. will create additional merge commit
-	ff = false
+    # By default, Git does not create an extra merge commit when merging a commit that is a descendant of the current commit.
+    # Instead, the tip of the current branch is fast-forwarded. When set to only, only such fast-forward merges are allowed
+	ff = only
 	rebase = false
