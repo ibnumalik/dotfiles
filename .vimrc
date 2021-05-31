@@ -31,6 +31,7 @@ Plugin 'fatih/vim-go'
 
 " Theme
 Plugin 'arcticicestudio/nord-vim'
+" Plugin 'altercation/vim-colors-solarized'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
