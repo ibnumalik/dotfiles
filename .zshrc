@@ -34,6 +34,10 @@ source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
 export FZF_DEFAULT_OPTS='--height 40% --layout=reverse'
 export FZF_DEFAULT_COMMAND='fd --type f'
+# Use fd to generate the list for directory completion
+_fzf_compgen_dir() {
+  fd --type d --follow --exclude ".git" . "$1"
+}
 
 # alias
 alias sc="source $HOME/.zshrc"
