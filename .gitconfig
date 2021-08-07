@@ -12,20 +12,20 @@
     pager = less -q
 
 [credential]
-	helper = cache --timeout=3600
+    helper = cache --timeout=3600
 
 # https://git-scm.com/docs/git-config#Documentation/git-config.txt-color
 [color]
-  diff = auto
-  status = auto
-  branch = auto
-  interactive = auto
-  ui = true
-  pager = true
+    diff = auto
+    status = auto
+    branch = auto
+    interactive = auto
+    ui = true
+    pager = true
 
 # https://git-scm.com/docs/git-config#Documentation/git-config.txt-colorstatusltslotgt
 [color "status"]
-	changed = yellow bold
+    changed = yellow bold
     added = green bold
 
 # https://git-scm.com/docs/git-config#Documentation/git-config.txt-colorbranchltslotgt
@@ -35,14 +35,14 @@
     remote = cyan bold
 
 [help]
-	autocorrect = 0
+    autocorrect = 0
 
 [init]
-	defaultBranch = master
+    defaultBranch = master
     #templatedir = '~/.git-templates'
 
 [commit]
-	template = ~/scripts/.git-commit-template
+    template = ~/scripts/.git-commit-template
 
 [mailmap]
     file = ~/scripts/.mailmap
@@ -55,7 +55,7 @@
     ##############
     ck = checkout
     new = checkout -b
-	f = fetch -p
+    f = fetch -p
     pl = pull --rebase
     ##############
     stats = shortlog --all -sn --no-merges
@@ -78,10 +78,10 @@
     mylog = log --author="shaiful.malik@myeg.com.my" --no-merges --pretty=format:'%C(auto)%h - %Cgreen(%<(10,trunc)%cr)%Creset %s'
 
 [merge]
-	conflictstyle = diff3
+    conflictstyle = diff3
 
 [pull]
     # By default, Git does not create an extra merge commit when merging a commit that is a descendant of the current commit.
     # Instead, the tip of the current branch is fast-forwarded. When set to only, only such fast-forward merges are allowed
-	ff = only
-	rebase = false
+    ff = only
+    rebase = false
