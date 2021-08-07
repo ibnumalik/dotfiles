@@ -47,14 +47,19 @@ alias path='echo $PATH | tr ":" "\n" | nl'
 alias fpath='echo $FPATH | tr ":" "\n" | nl'
 alias u="ultralist"
 alias d='dirs -v | fzf'
+alias sail='bash vendor/bin/sail'
 
 export GOPATH=$HOME/go
 
 # path
+JAVA_HOME='/usr/lib/jvm/java-8-openjdk/jre'
+PATH=$JAVA_HOME/bin:$PATH
 PATH=$PATH:$GOPATH/bin
 PATH=/usr/share/dotnet:$HOME/.dotnet/tools:$PATH
 PATH=$HOME/.config/composer/vendor/bin:$PATH
 FPATH=$HOME/.completion.d:$FPATH
+
+CHROME_EXECUTABLE=/usr/bin/google-chrome-stable
 
 # zsh parameter completion for the dotnet CLI
 _dotnet_zsh_complete()
@@ -75,3 +80,14 @@ complete -C '/usr/bin/aws_completer' aws
 # tabtab source for packages
 # uninstall by removing these lines
 [[ -f ~/.config/tabtab/__tabtab.zsh ]] && . ~/.config/tabtab/__tabtab.zsh || true
+
+# run npm script (requires jq) / allow to pass args
+fns() {
+  local script
+  script=$(cat package.json | jq -r '.scripts | keys[] ' | sort | fzf) && npm run $(echo "$script") "$@"
+}
+
+update_mirrorlist() {
+  cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.`date +'%d%m%Y'`.bak
+  reflector --country 'Singapore' --verbose --latest 5 --sort rate --save /etc/pacman.d/mirrorlist
+}
