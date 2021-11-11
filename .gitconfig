@@ -71,11 +71,11 @@
     logdetail = log --abbrev-commit --pretty=format:'%C(auto)%h - %s %Cgreen(%cr) %C(bold blue)<%aN>%Creset'
     logsimple = log --no-merges --pretty=format:'%C(auto)%h - %s'
     # Log my commit
-    recap = log --all --author="ibnumalik@tbd.my" --no-merges --pretty=format:'%Cred%h%Creset - %s'
-    today = log --all --author="ibnumalik@tbd.my" --no-merges --oneline --since=00:00:00
-    this-week = log --all --author="ibnumalik@tbd.my" --no-merges --oneline --since=last-monday --until=\"now\"
-    report = log --all --author="ibnumalik@tbd.my" --no-merges --pretty=format:'%h %x09 %cd %x09 %s' --date=short
-    mylog = log --author="shaiful.malik@myeg.com.my" --no-merges --pretty=format:'%C(auto)%h - %Cgreen(%<(10,trunc)%cr)%Creset %s'
+    recap = log --all --author="ibnumalikmy@gmail.com" --no-merges --pretty=format:'%Cred%h%Creset - %s'
+    today = log --all --author="ibnumalikmy@gmail.com" --no-merges --oneline --since=00:00:00
+    this-week = log --all --author="ibnumalikmy@gmail.com" --no-merges --oneline --since=last-monday --until=\"now\"
+    report = log --all --author="ibnumalikmy@gmail.com" --no-merges --pretty=format:'%h %x09 %cd %x09 %s' --date=short
+    mylog = log --author="ibnumalikmy@gmail.com" --no-merges --pretty=format:'%C(auto)%h - %Cgreen(%<(10,trunc)%cr)%Creset %s'
 
 [merge]
     conflictstyle = diff3
