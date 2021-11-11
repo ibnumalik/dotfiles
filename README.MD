@@ -22,6 +22,10 @@ This are the fonts used by our apps.
 * JetBrains Mono
 * Fira Code
 
+## ZSH
+
+how to setup autocompletion. how to manage PATH. what is needed to install so our alias and binding works when using zsh. should we use oh-my-zsh
+
 ## rofi
 
 Rofi, like dmenu, will provide the user with a textual list of options where one or more can be selected. This can either be running an application, selecting a window, or options provided by an external script.

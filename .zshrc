@@ -92,3 +92,5 @@ update_mirrorlist() {
   cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.`date +'%d%m%Y'`.bak
   reflector --country 'Singapore' --verbose --latest 5 --sort rate --save /etc/pacman.d/mirrorlist
 }
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
