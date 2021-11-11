@@ -125,6 +125,16 @@ swap <kbd>ctrl</kbd> with <kbd>CapsLk</kbd>.
 setxkbmap -option ctrl:swapcaps
 ```
 
+## scripts
+
+Convenient script.
+
+### startup
+
+Setup notification sound. clone gaudible git@github.com:dbazile/gaudible.git
+Swap ctrl and capslock key
+Start greenclip
+
 ## General recommendations
 
 1. Use zsh and oh-my-zsh for easy theming and autocomplete.
