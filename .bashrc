@@ -125,3 +125,5 @@ export NVM_DIR="$HOME/.nvm"
 # Unicode F061, Index 2114 
 # http://bluejamesbond.github.io/CharacterMap/
 export PS1='\[\033[01;34m\]\W\[\033[0m\]\[\033[01;31m\]$(__git_ps1)\[\033[0m\]\[\033[01;32m\]  \[\033[0m\]'
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
