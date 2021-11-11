@@ -48,6 +48,7 @@ alias fpath='echo $FPATH | tr ":" "\n" | nl'
 alias u="ultralist"
 alias d='dirs -v | fzf'
 alias sail='bash vendor/bin/sail'
+alias dush="du -sh * | sort -h"
 
 export GOPATH=$HOME/go
 
