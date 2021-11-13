@@ -37,40 +37,24 @@ _fzf_compgen_dir() {
 alias sc="source $HOME/.zshrc"
 alias el="exa -la"
 alias elg="exa -la --group-directories-first"
+alias eld="exa -la -s=modified"
 alias path='echo $PATH | tr ":" "\n" | nl'
-alias fpath='echo $FPATH | tr ":" "\n" | nl'
+alias fpath='echo $FPATH | tr ":" "\n" | nl' # FPATH The search path for function definitions.
 alias u="ultralist"
-alias d='dirs -v | fzf'
-alias sail='bash vendor/bin/sail'
-alias dush="du -sh * | sort -h"
+alias d='dirs -v | fzf' # dirs command shell builtin is used to display the list of currently remembered directories
+alias sail='bash vendor/bin/sail' # Laravel sail. Only can be used in Laravel project directory.
+alias dush="du -sh * | sort -h" # List all files and directories size in human readable format.
 
 export GOPATH=$HOME/go
 
 # path
-JAVA_HOME='/usr/lib/jvm/java-8-openjdk/jre'
-PATH=$JAVA_HOME/bin:$PATH
 PATH=$PATH:$GOPATH/bin
-PATH=/usr/share/dotnet:$HOME/.dotnet/tools:$PATH
 PATH=$HOME/.config/composer/vendor/bin:$PATH
+# https://unix.stackexchange.com/questions/33255/how-to-define-and-load-your-own-shell-function-in-zsh
 FPATH=$HOME/.completion.d:$FPATH
-
-CHROME_EXECUTABLE=/usr/bin/google-chrome-stable
-
-# zsh parameter completion for the dotnet CLI
-_dotnet_zsh_complete()
-{
-  local completions=("$(dotnet complete "$words")")
-
-  reply=( "${(ps:\n:)completions}" )
-}
-
-compctl -K _dotnet_zsh_complete dotnet
 
 # Make QT app look like gnome app
 export QT_QPA_PLATFORMTHEME='gnome'
-
-# aws autocomplete
-complete -C '/usr/bin/aws_completer' aws
 
 # tabtab source for packages
 # uninstall by removing these lines
