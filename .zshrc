@@ -71,4 +71,31 @@ update_mirrorlist() {
   reflector --country 'Singapore' --verbose --latest 5 --sort rate --save /etc/pacman.d/mirrorlist
 }
 
+function powerline_precmd() {
+    PS1="$(powerline-go -error $? -jobs $(jobs -p | wc -l) -hostname-only-if-ssh -cwd-mode dironly)"
+
+    # Uncomment the following line to automatically clear errors after showing
+    # them once. This not only clears the error for powerline-go, but also for
+    # everything else you run in that shell. Don't enable this if you're not
+    # sure this is what you want.
+
+    #set "?"
+}
+
+function install_powerline_precmd() {
+  for s in "${precmd_functions[@]}"; do
+    if [ "$s" = "powerline_precmd" ]; then
+      return
+    fi
+  done
+  precmd_functions+=(powerline_precmd)
+}
+
+if [ "$TERM" != "linux" ] && [ -x "$(command -v powerline-go)" ]; then
+    install_powerline_precmd
+fi
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Setup fnm node manager
+eval "$(fnm env)"
