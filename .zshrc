@@ -22,19 +22,13 @@ zstyle ':completion:*'  matcher-list 'm:{a-z}={A-Z}'
 # For autocompletion with an arrow-key driven interface, add the following to:
 zstyle ':completion:*' menu select
 
-# Start powerline daemon
-powerline-daemon -q
-source /usr/lib/python3.9/site-packages/powerline/bindings/zsh/powerline.zsh
-
-# Set up Node Version Manager
-source /usr/share/nvm/init-nvm.sh
-
 # fzf
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
 export FZF_DEFAULT_OPTS='--height 40% --layout=reverse'
 export FZF_DEFAULT_COMMAND='fd --type f'
-# Use fd to generate the list for directory completion
+
+# Use fd to generate the fzf list for directory completion
 _fzf_compgen_dir() {
   fd --type d --follow --exclude ".git" . "$1"
 }
