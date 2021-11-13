@@ -132,8 +132,10 @@ Convenient script.
 ### startup
 
 Setup notification sound. clone gaudible git@github.com:dbazile/gaudible.git
-Swap ctrl and capslock key
 Start greenclip
+
+**swap ctrl and caps**
+Use Gnome Tweaks to swaps the keys. Under Keyboard&Mouse > Additional Layout Options > Ctrl position > Swap Ctrl and Caps Lock
 
 ## General recommendations
 
