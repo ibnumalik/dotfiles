@@ -11,10 +11,6 @@ unsetopt beep
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/ibnumalik/.zshrc'
-
-# https://wiki.archlinux.org/title/zsh#Command_completion
-autoload -Uz compinit
-compinit
 # End of lines added by compinstall
 
 # Autocomplete will expand lowercase to uppercase
@@ -22,16 +18,33 @@ zstyle ':completion:*'  matcher-list 'm:{a-z}={A-Z}'
 # For autocompletion with an arrow-key driven interface, add the following to:
 zstyle ':completion:*' menu select
 
-# fzf
-source /usr/share/fzf/key-bindings.zsh
-source /usr/share/fzf/completion.zsh
-export FZF_DEFAULT_OPTS='--height 40% --layout=reverse'
-export FZF_DEFAULT_COMMAND='fd --type f'
+# path
+# path+=($HOME/.config/composer/vendor/bin)
+# https://unix.stackexchange.com/questions/33255/how-to-define-and-load-your-own-shell-function-in-zsh
+# export FPATH=$HOME/.completion.d:$FPATH
+fpath+=($HOME/.zsh/completion)
 
-# Use fd to generate the fzf list for directory completion
-_fzf_compgen_dir() {
-  fd --type d --follow --exclude ".git" . "$1"
-}
+# https://wiki.archlinux.org/title/zsh#Command_completion
+# should autoload after fpath
+autoload -Uz compinit
+compinit -i
+
+# why this is loaded? who load this? even when it is commented out
+# export GOPATH=$HOME/go
+# path+=($GOPATH/bin)
+
+# fzf
+if [ -d /usr/share/fzf ]; then
+  source /usr/share/fzf/key-bindings.zsh
+  source /usr/share/fzf/completion.zsh
+  export FZF_DEFAULT_OPTS='--height 40% --layout=reverse'
+  export FZF_DEFAULT_COMMAND='fd --type f'
+
+  # Use fd to generate the fzf list for directory completion
+  _fzf_compgen_dir() {
+    fd --type d --follow --exclude ".git" . "$1"
+  }
+fi
 
 # alias
 alias sc="source $HOME/.zshrc"
@@ -45,20 +58,8 @@ alias d='dirs -v | fzf' # dirs command shell builtin is used to display the list
 alias sail='bash vendor/bin/sail' # Laravel sail. Only can be used in Laravel project directory.
 alias dush="du -sh * | sort -h" # List all files and directories size in human readable format.
 
-export GOPATH=$HOME/go
-
-# path
-PATH=$PATH:$GOPATH/bin
-PATH=$HOME/.config/composer/vendor/bin:$PATH
-# https://unix.stackexchange.com/questions/33255/how-to-define-and-load-your-own-shell-function-in-zsh
-FPATH=$HOME/.completion.d:$FPATH
-
 # Make QT app look like gnome app
 export QT_QPA_PLATFORMTHEME='gnome'
-
-# tabtab source for packages
-# uninstall by removing these lines
-[[ -f ~/.config/tabtab/__tabtab.zsh ]] && . ~/.config/tabtab/__tabtab.zsh || true
 
 # run npm script (requires jq) / allow to pass args
 fns() {
@@ -71,7 +72,7 @@ update_mirrorlist() {
   reflector --country 'Singapore' --verbose --latest 5 --sort rate --save /etc/pacman.d/mirrorlist
 }
 
-function powerline_precmd() {
+powerline_precmd() {
     PS1="$(powerline-go -error $? -jobs $(jobs -p | wc -l) -hostname-only-if-ssh -cwd-mode dironly)"
 
     # Uncomment the following line to automatically clear errors after showing
@@ -82,7 +83,7 @@ function powerline_precmd() {
     #set "?"
 }
 
-function install_powerline_precmd() {
+install_powerline_precmd() {
   for s in "${precmd_functions[@]}"; do
     if [ "$s" = "powerline_precmd" ]; then
       return
@@ -95,7 +96,9 @@ if [ "$TERM" != "linux" ] && [ -x "$(command -v powerline-go)" ]; then
     install_powerline_precmd
 fi
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
 # Setup fnm node manager
 eval "$(fnm env)"
+
+if type "fnm" > /dev/null;  then
+    echo "fnm exist"
+fi
