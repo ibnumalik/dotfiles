@@ -96,9 +96,7 @@ if [ "$TERM" != "linux" ] && [ -x "$(command -v powerline-go)" ]; then
     install_powerline_precmd
 fi
 
-# Setup fnm node manager
-eval "$(fnm env)"
-
 if type "fnm" > /dev/null;  then
-    echo "fnm exist"
+    # Setup fnm node manager
+    eval "$(fnm env)"
 fi
