@@ -18,9 +18,9 @@ yadm clone git@github.com:ibnumalik/dotfiles.git
 
 This are the fonts used by our apps.
 
-* SauceCodePro Nerd Font
-* JetBrains Mono
-* Fira Code
+- SauceCodePro Nerd Font
+- JetBrains Mono
+- Fira Code
 
 ## ZSH
 
@@ -54,17 +54,17 @@ In the config file we are using tmux plugin manager. So, after installing tmux, 
 
 1. Clone TPM
 
-    ```bash
-    $ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-    ```
+   ```bash
+   $ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+   ```
 
 2. Reload tmux config to activate tpm
 
-    Activate command by pressing `prefix` and type `:source ~/.tmux.conf`
+   Activate command by pressing `prefix` and type `:source ~/.tmux.conf`
 
 3. Install plugins
 
-    Press `prefix` + <kbd>I</kbd> (capital i, as in Install) to fetch the plugin.
+   Press `prefix` + <kbd>I</kbd> (capital i, as in Install) to fetch the plugin.
 
 ### List of tmux plugins used
 
@@ -79,33 +79,30 @@ The shortcut that is defined in the config files. If the list is growing, maybe 
 1. Default prefix key is <kbd>ctrl</kbd> + <kbd>b</kbd>. But we change it to <kbd>ctrl</kbd> + <kbd>a</kbd> because its easier to reach. So, whenever we refer to `prefix`, its <kbd>ctrl</kbd> + <kbd>a</kbd>.
 
 2. Split panes
-    - horizontally: `prefix` then, <kbd>|</kbd>
-    - vertically: `prefix` then, <kbd>-</kbd>
+
+   - horizontally: `prefix` then, <kbd>|</kbd>
+   - vertically: `prefix` then, <kbd>-</kbd>
 
 3. Switching between windows
-    - previous window: `prefix` then, <kbd>ctrl</kbd> + <kbd>p</kbd>
-    - next window: `prefix` then, <kbd>ctrl</kbd> + <kbd>n</kbd>
+
+   - previous window: `prefix` then, <kbd>ctrl</kbd> + <kbd>p</kbd>
+   - next window: `prefix` then, <kbd>ctrl</kbd> + <kbd>n</kbd>
 
 4. Config
-    - reload config file: `prefix` then, <kbd>r</kbd>
-    - edit config file at right side: `prefix` then, <kbd>M</kbd>
+   - reload config file: `prefix` then, <kbd>r</kbd>
+   - edit config file at right side: `prefix` then, <kbd>M</kbd>
 
 ## vim
 
 Vim is a highly configurable text editor built to make creating and changing any kind of text very efficient. It is included as "vi" with most UNIX systems and with Apple OS X.
 
-### vim vundle
+### vim plug
 
-vim vundle is vim plugin manager.
+vim plug is vim plugin manager. It is used to install vim plugins. Vim plug replace vim vundle used previously.
 
-Install vundle:
+#### Installing vim-plug:
 
-1. Clone
-
-    ```
-    git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-    ```
-2. Launch vim and run `:PluginInstall`
+Vim plug will be automatically installed based on the script in the `.vimrc`.
 
 ## git
 
