@@ -24,15 +24,17 @@ font:
 
 selection:
   save_to_clipboard: true
-  background_opacity: 0.2
+    #background_opacity: 0.8
 
 window:
   padding:
-    x: 10
-    y: 10
-  dynamic_title: true
+    x: 14
+    y: 14
+      #dynamic_title: true
 
 draw_bold_text_with_bright_colors: true
+key_bindings:
+    - { key: Return,   mods: Control|Shift, action: SpawnNewInstance }
 
 colors:
   primary:
