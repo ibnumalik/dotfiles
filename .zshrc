@@ -32,6 +32,7 @@ compinit -i
 # why this is loaded? who load this? even when it is commented out
 # export GOPATH=$HOME/go
 # path+=($GOPATH/bin)
+export PATH="$HOME/.local/bin:$PATH"
 
 # fzf
 if [ -d /usr/share/fzf ]; then
