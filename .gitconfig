@@ -57,6 +57,7 @@
     new = checkout -b
     f = fetch -p
     pl = pull --rebase
+    b = branch
     ##############
     stats = shortlog --all -sn --no-merges
     ##############
