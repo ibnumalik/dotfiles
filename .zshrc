@@ -99,5 +99,16 @@ fi
 
 if type "fnm" > /dev/null;  then
     # Setup fnm node manager
-    eval "$(fnm env)"
+    eval "$(fnm env --use-on-cd)"
+fi
+
+
+# Load Angular CLI autocompletion.
+if type ng &> /dev/null; then
+    source <(ng completion script)
+fi
+
+
+if test -f /opt/asdf-vm/asdf.sh; then
+    . /opt/asdf-vm/asdf.sh
 fi
