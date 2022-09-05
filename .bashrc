@@ -127,3 +127,4 @@ export NVM_DIR="$HOME/.nvm"
 export PS1='\[\033[01;34m\]\W\[\033[0m\]\[\033[01;31m\]$(__git_ps1)\[\033[0m\]\[\033[01;32m\]  \[\033[0m\]'
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+[ -f "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
