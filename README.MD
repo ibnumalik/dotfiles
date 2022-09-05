@@ -1,10 +1,10 @@
 # ibnumalik's dotfiles
 
-This repo exist to help us synchronize the configuration for our favorite cli app, such as git, tmux and vim. Hopefully this will create a seamless experience when we are reinstalling or moving to other devices. Instead of setting up everything again, we just need to clone this repo and can start doing our work.
+A place to synchronize the configuration file for cli app, such as git, tmux and vim. Hopefully this will create a seamless experience when a new dev environment is created. Instead of setting up everything again, just clone this repo and everything will feel like home.
 
 ## Usage
 
-Use `yadm` to manage dotfiles. The reason being is it is easy to setup and the underlying usage is basically just git. So, before we can begin using our dotfiles, kindly install `yadm` so we can just clone it to the machine and use it right away.
+Use `yadm` to manage dotfiles. The reason being is, it is easy to setup and the underlying usage is basically just git. So, before we can begin using our dotfiles, kindly install `yadm` so we can just clone it to the machine and use it right away.
 
 ### Tips
 
