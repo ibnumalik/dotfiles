@@ -24,11 +24,19 @@ This are the fonts used by our apps.
 
 ## ZSH
 
-how to setup autocompletion. how to manage PATH. what is needed to install so our alias and binding works when using zsh. should we use oh-my-zsh
+TODO
+-[] how to setup autocompletion. 
+-[] how to manage PATH. 
+-[] what is needed to install so our alias and binding works when using zsh. 
+-[] should we use oh-my-zsh
 
 ## rofi
 
 Rofi, like dmenu, will provide the user with a textual list of options where one or more can be selected. This can either be running an application, selecting a window, or options provided by an external script.
+
+### Notes
+Really wanted to use rofi, but wayland does not support it. And the alternative is not good enough.
+Currently, I use gnome extension launcher to switch apps or launch app.
 
 ### Usage
 
@@ -91,6 +99,10 @@ The shortcut that is defined in the config files. If the list is growing, maybe 
 4. Config
    - reload config file: `prefix` then, <kbd>r</kbd>
    - edit config file at right side: `prefix` then, <kbd>M</kbd>
+
+### TODO
+
+To research if its possible to automate the tmux init setup, like vim.
 
 ## vim
 
