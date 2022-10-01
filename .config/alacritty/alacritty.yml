@@ -1,15 +1,15 @@
 
 font:
   normal:
-    family: JetBrains Mono
+    family: JetBrains Mono NL
     style: Regular
 
   bold:
-    family: JetBrains Mono
+    family: JetBrains Mono NL
     style: Bold
 
   italic:
-    family: JetBrains Mono
+    family: JetBrains Mono NL
     style: Italic
 
   size: 12.0
@@ -27,6 +27,7 @@ selection:
     #background_opacity: 0.8
 
 window:
+  decorations: None
   padding:
     x: 14
     y: 14
