@@ -1,0 +1,10 @@
+<snippet>
+<content><![CDATA[
+if got != want {
+	t.Errorf("got %${1:d} want %${2:d}", got, want)
+}
+]]></content>
+<tabTrigger>ifte</tabTrigger>
+<description>if got != want</description>
+<scope>source.go, meta.block.go</scope>
+</snippet>

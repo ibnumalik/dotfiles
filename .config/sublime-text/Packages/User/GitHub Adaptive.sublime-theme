@@ -1,0 +1,18 @@
+// Documentation at https://www.sublimetext.com/docs/themes.html
+{
+	"variables":
+	{
+		"fontFace": "Cantarell",
+		"fontSizeSm": 14,
+		"fontSizeMd": 14,
+		"fontSizeLg": 16,
+	},
+	"rules":
+	[
+		{
+            "class": "sidebar_label",
+            "font.face": "var(fontFace)",
+            "font.size": "var(fontSizeSm)"
+        },
+	]
+}

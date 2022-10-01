@@ -1,0 +1,16 @@
+{
+	"clients":
+	{
+		"gopls":
+		{
+			"enabled": true,
+			"initializationOptions": {
+                "experimentalWorkspaceModule": false
+            }
+		},
+	},
+	"lsp_code_actions_on_save": {
+		"source.fixAll.eslint": true
+	},
+	"show_diagnostics_panel_on_save": 0
+}
