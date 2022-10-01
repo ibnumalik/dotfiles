@@ -1,0 +1,57 @@
+.switcher-label, .switcher-icon {
+  padding: .4em;
+}
+
+.switcher-box {
+  border-top: 2px solid #343a3a;
+}
+
+.switcher-box:hover {
+  /*background-color: rgba(54, 56, 58, 1);*/
+  background-color: #4C566A;
+}
+
+.switcher-box:last-child {
+  border-radius: 0 0 8px 8px;
+}
+
+.switcher-box-layout {
+  font-weight: bold;
+  color: #aaaaaa;
+  /*background-color: rgba(23, 25, 26, 0.95);*/
+  background-color: #2E3440;
+  border: 2px solid #343a3a;
+  border-radius: 8px;
+  margin-top: 100px;
+}
+
+.switcher-highlight {
+  color: #ffffff;
+  /*background-color: #215d9c;*/
+  background-color: #434C5E;
+}
+
+.switcher-highlight:hover {
+  /*color: #ffffff;*/
+  color: #D8DEE9;
+  background-color: #5E81AC;
+}
+
+.switcher-entry {
+  margin: .4em;
+  /*background-color: red;*/
+  color: #D8DEE9;
+  /*margin: .5em;*/
+  background-color: red;
+  font-size: 1em;
+  border: none;
+  border-radius: 3px;
+  box-shadow: none;
+  background: none;
+}
+
+.switcher-shortcut {
+  text-align: center;
+  padding-left: .4em;
+  padding-right: .4em;
+}
