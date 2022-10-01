@@ -1,3 +1,4 @@
+# set -x
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
 HISTSIZE=10000
@@ -105,10 +106,24 @@ fi
 
 # Load Angular CLI autocompletion.
 if type ng &> /dev/null; then
-    source <(ng completion script)
+    # source <(ng completion script)
 fi
 
 
 if test -f /opt/asdf-vm/asdf.sh; then
+    export ASDF_CONFIG_FILE="$HOME/.config/asdf/.asdfrc"
     . /opt/asdf-vm/asdf.sh
 fi
+
+if ! type vi > /dev/null; then
+    echo "vi not exist"
+    ln -s /usr/bin/vim $HOME/.local/bin/vi
+fi
+
+## bat as manpager
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+
+function rename_wezterm_title {
+  echo "\x1b]1337;SetUserVar=panetitle=$(echo -n $1 | base64)\x07"
+}
+#set +x
