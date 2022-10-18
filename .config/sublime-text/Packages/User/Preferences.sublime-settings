@@ -6,7 +6,7 @@
 	"ignored_packages":
 	[
 		// "A File Icon",
-		"AdvancedNewFile",
+		// "AdvancedNewFile",
 		"ApplySyntax",
 		"ayu",
 		"BracketHighlighter",
@@ -42,7 +42,7 @@
 		"Ngx HTML",
 		// "Nord",
 		"One Dark Material - Theme",
-		"Package Control",
+		// "Package Control",
 		"PHP Companion",
 		"Pretty JSON",
 		"Pretty YAML",
