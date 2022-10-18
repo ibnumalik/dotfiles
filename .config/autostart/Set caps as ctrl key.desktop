@@ -1,0 +1,6 @@
+[Desktop Entry]
+Exec=setxkbmap -option ctrl:swapcaps
+Name=Set caps as ctrl key
+OnlyShowIn=LXQt;
+Type=Application
+Version=1.0
