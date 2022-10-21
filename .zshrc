@@ -50,6 +50,7 @@ fi
 
 # alias
 alias sc="source $HOME/.zshrc"
+alias ls="exa --icons"
 alias el="exa -la"
 alias elg="exa -la --group-directories-first"
 alias eld="exa -la -s=modified"
