@@ -1,7 +1,7 @@
 {
 	"theme": "GitHub Adaptive.sublime-theme",
 	"color_scheme": "Nord.sublime-color-scheme",
-	"font_size": 12,
+	"font_size": 10,
 	"font_face": "JetBrains Mono",
 	"ignored_packages":
 	[
@@ -58,8 +58,8 @@
 		"Theme - City Lights",
 		"Theme - Spacegray",
 		"Tmux Syntax Highlight",
-		"Vue Syntax Highlight",
 		"Vintage",
+		"Vue Syntax Highlight",
 	],
 	// "lsp_format_on_save": true,
 	// Recommended settings for Github theme
