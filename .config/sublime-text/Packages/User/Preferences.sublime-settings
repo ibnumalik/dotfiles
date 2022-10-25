@@ -1,6 +1,6 @@
 {
-	"theme": "GitHub Adaptive.sublime-theme",
-	"color_scheme": "Nord.sublime-color-scheme",
+	// "theme": "GitHub Adaptive.sublime-theme",
+	// "color_scheme": "Nord.sublime-color-scheme",
 	"font_size": 12,
 	"font_face": "JetBrains Mono",
 	"ignored_packages":
@@ -58,8 +58,8 @@
 		"Theme - City Lights",
 		"Theme - Spacegray",
 		"Tmux Syntax Highlight",
-		"Vue Syntax Highlight",
 		"Vintage",
+		"Vue Syntax Highlight",
 	],
 	// "lsp_format_on_save": true,
 	// Recommended settings for Github theme
@@ -85,6 +85,7 @@
     "dart_sdk_path": "/opt/flutter/bin/dart",
     "rulers": [80],
     "ui_scale": 1.2,
+    "ui_scale": 1.0,
     // "node_path": "/home/ibnumalik/.fnm/node-versions/v14.18.1/installation/bin/node",
 	/*"theme": "Default Dark.sublime-theme",*/
 }
