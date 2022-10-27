@@ -1,0 +1,6 @@
+[Desktop Entry]
+Exec=xrandr --output Virtual-1 --mode 1920x1200
+Name=Set resolution to 1920x1200
+OnlyShowIn=LXQt;
+Type=Application
+Version=1.0
