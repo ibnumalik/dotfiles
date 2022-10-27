@@ -51,7 +51,7 @@ return {
     use_fancy_tab_bar = false,
     tab_bar_at_bottom = true,
     tab_max_width = 20,
-    window_decorations = "NONE",
+    -- window_decorations = "NONE",
     font_antialias = "Subpixel",
     window_padding = {
         -- left = 2,
