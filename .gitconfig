@@ -86,3 +86,5 @@
     # Instead, the tip of the current branch is fast-forwarded. When set to only, only such fast-forward merges are allowed
     ff = only
     rebase = false
+[push]
+	autoSetupRemote = true
