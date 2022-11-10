@@ -132,6 +132,10 @@ function delete_local_branch {
   git branch -vv | awk '/: gone]/{print $1}' | xargs git branch -D
 }
 
+function delete_branch_bulk {
+  git branch --no-color | fzf -m | xargs -I {} git branch -D '{}'
+}
+
 export EDITOR=vim
 
 #set +x
