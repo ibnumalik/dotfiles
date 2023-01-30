@@ -54,6 +54,7 @@ alias sc="source $HOME/.zshrc"
 #alias ls="exa --icons"
 alias lsc="exa --icons"
 alias el="exa -la"
+alias lss="exa --icons"
 alias elg="exa -la --group-directories-first"
 alias eld="exa -la -s=modified"
 alias path='echo $PATH | tr ":" "\n" | nl'
