@@ -87,4 +87,7 @@
     ff = only
     rebase = false
 [push]
+	default = current
 	autoSetupRemote = true
+[http]
+	postBuffer = 524288000
