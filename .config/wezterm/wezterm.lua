@@ -44,6 +44,7 @@ end)
 return {
     color_scheme = "nord",
     font = wezterm.font_with_fallback({"JetBrains Mono NL", "Fira Code"}),
+    font_size = 11,
     line_height = 1.4,
     hide_tab_bar_if_only_one_tab = true,
     window_background_opacity = 0.99,
@@ -51,12 +52,14 @@ return {
     use_fancy_tab_bar = false,
     tab_bar_at_bottom = true,
     tab_max_width = 20,
-    -- window_decorations = "NONE",
+    --window_decorations = "NONE",
     font_antialias = "Subpixel",
-    window_padding = {
+  --  window_padding = {
         -- left = 2,
         -- right = 2,
         -- top = 0,
         -- bottom = 10,
-    },
+   -- },
+    window_background_opacity = 1.0,
+    warn_about_missing_glyphs = false
 }
