@@ -31,9 +31,10 @@ autoload -Uz compinit
 compinit -i
 
 # why this is loaded? who load this? even when it is commented out
-# export GOPATH=$HOME/go
+export GOPATH=$HOME/go
 # path+=($GOPATH/bin)
 export PATH="$HOME/.local/bin:$PATH"
+# export PATH=$HOME/go/bin
 
 # fzf
 if [ -d /usr/share/fzf ]; then
@@ -50,7 +51,8 @@ fi
 
 # alias
 alias sc="source $HOME/.zshrc"
-alias ls="exa --icons"
+#alias ls="exa --icons"
+alias lsc="exa --icons"
 alias el="exa -la"
 alias elg="exa -la --group-directories-first"
 alias eld="exa -la -s=modified"
@@ -60,6 +62,7 @@ alias u="ultralist"
 alias d='dirs -v | fzf' # dirs command shell builtin is used to display the list of currently remembered directories
 alias sail='bash vendor/bin/sail' # Laravel sail. Only can be used in Laravel project directory.
 alias dush="du -sh * | sort -h" # List all files and directories size in human readable format.
+alias db="distrobox"
 
 # Make QT app look like gnome app
 export QT_QPA_PLATFORMTHEME='gnome'
@@ -76,7 +79,8 @@ update_mirrorlist() {
 }
 
 powerline_precmd() {
-    PS1="$(powerline-go -error $? -jobs $(jobs -p | wc -l) -hostname-only-if-ssh -cwd-mode dironly)"
+    PS1="$($GOPATH/bin/powerline-go -error $? -jobs $(jobs -p | wc -l) -hostname-only-if-ssh -cwd-mode dironly)"
+    # PS1="$($GOPATH/bin/powerline-go -error $? -jobs ${${(%):%j}:-0})"
 
     # Uncomment the following line to automatically clear errors after showing
     # them once. This not only clears the error for powerline-go, but also for
@@ -95,9 +99,9 @@ install_powerline_precmd() {
   precmd_functions+=(powerline_precmd)
 }
 
-if [ "$TERM" != "linux" ] && [ -x "$(command -v powerline-go)" ]; then
+# if [ "$TERM" != "linux" ] && [ -x "$(command -v powerline-go)" ]; then
     install_powerline_precmd
-fi
+# fi
 
 if type "fnm" > /dev/null;  then
     # Setup fnm node manager
