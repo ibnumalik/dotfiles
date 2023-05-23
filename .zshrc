@@ -56,6 +56,7 @@ alias lsc="exa --icons"
 alias el="exa -la"
 alias lss="exa --icons"
 alias elg="exa -la --group-directories-first"
+alias exag="exa --group-directories-first"
 alias eld="exa -la -s=modified"
 alias path='echo $PATH | tr ":" "\n" | nl'
 alias fpath='echo $FPATH | tr ":" "\n" | nl' # FPATH The search path for function definitions.
