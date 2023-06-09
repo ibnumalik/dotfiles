@@ -53,6 +53,7 @@ fi
 alias sc="source $HOME/.zshrc"
 #alias ls="exa --icons"
 alias lsc="exa --icons"
+alias etree="exa --tree -I \"node_modules\""
 alias el="exa -la"
 alias lss="exa --icons"
 alias elg="exa -la --group-directories-first"
@@ -65,6 +66,7 @@ alias d='dirs -v | fzf' # dirs command shell builtin is used to display the list
 alias sail='bash vendor/bin/sail' # Laravel sail. Only can be used in Laravel project directory.
 alias dush="du -sh * | sort -h" # List all files and directories size in human readable format.
 alias db="distrobox"
+alias preview-tree="fzf --preview 'bat styles=number,changes --color=always {} | head -500'"
 
 # Make QT app look like gnome app
 export QT_QPA_PLATFORMTHEME='gnome'
