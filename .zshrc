@@ -32,8 +32,9 @@ compinit -i
 
 # why this is loaded? who load this? even when it is commented out
 export GOPATH=$HOME/go
-# path+=($GOPATH/bin)
+path+=($GOPATH/bin)
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="/usr/local/go/bin:$PATH"
 # export PATH=$HOME/go/bin
 
 # fzf
@@ -51,14 +52,14 @@ fi
 
 # alias
 alias sc="source $HOME/.zshrc"
-#alias ls="exa --icons"
-alias lsc="exa --icons"
-alias etree="exa --tree -I \"node_modules\""
-alias el="exa -la"
-alias lss="exa --icons"
-alias elg="exa -la --group-directories-first"
-alias exag="exa --group-directories-first"
-alias eld="exa -la -s=modified"
+#alias ls="eza --icons"
+alias lsc="eza --icons"
+alias etree="eza --tree -I \"node_modules\""
+alias el="eza -la"
+alias lss="eza --icons"
+alias elg="eza -la --group-directories-first"
+alias ezag="eza --group-directories-first"
+alias eld="eza -la -s=modified"
 alias path='echo $PATH | tr ":" "\n" | nl'
 alias fpath='echo $FPATH | tr ":" "\n" | nl' # FPATH The search path for function definitions.
 alias u="ultralist"
@@ -67,6 +68,7 @@ alias sail='bash vendor/bin/sail' # Laravel sail. Only can be used in Laravel pr
 alias dush="du -sh * | sort -h" # List all files and directories size in human readable format.
 alias db="distrobox"
 alias preview-tree="fzf --preview 'bat styles=number,changes --color=always {} | head -500'"
+alias yt-ddlp="podman run --rm -it -v "$(pwd):/downloads:rw" ghcr.io/jauderho/yt-dlp"
 
 # Make QT app look like gnome app
 export QT_QPA_PLATFORMTHEME='gnome'
