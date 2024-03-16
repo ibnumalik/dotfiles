@@ -40,7 +40,7 @@ export PATH="$HOME/.local/bin:$PATH"
 if [ -d /usr/share/fzf ]; then
   source /usr/share/fzf/key-bindings.zsh
   source /usr/share/fzf/completion.zsh
-  export FZF_DEFAULT_OPTS='--height 40% --layout=reverse'
+  export FZF_DEFAULT_OPTS='--height 80% --layout=reverse'
   export FZF_DEFAULT_COMMAND='fd --type f'
 
   # Use fd to generate the fzf list for directory completion
