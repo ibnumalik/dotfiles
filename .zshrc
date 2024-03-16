@@ -4,7 +4,7 @@ HISTFILE=~/.histfile
 HISTSIZE=10000
 SAVEHIST=10000
 # Allow to switch directory quickly. Use d command.
-setopt autocd autopushd pushdignoredups
+setopt autocd autopushd pushdignoredups append_history share_history
 # Suppress beep noise when error happen?
 unsetopt beep
 # Uncomment to enable vim mode
