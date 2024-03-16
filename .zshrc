@@ -66,7 +66,7 @@ alias d='dirs -v | fzf' # dirs command shell builtin is used to display the list
 alias sail='bash vendor/bin/sail' # Laravel sail. Only can be used in Laravel project directory.
 alias dush="du -sh * | sort -h" # List all files and directories size in human readable format.
 alias db="distrobox"
-alias preview-tree="fzf --preview 'bat styles=number,changes --color=always {} | head -500'"
+alias preview-tree="fzf --preview 'bat --style numbers,changes --color=always {} | head -500'"
 
 # Make QT app look like gnome app
 export QT_QPA_PLATFORMTHEME='gnome'
