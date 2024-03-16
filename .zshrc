@@ -130,6 +130,7 @@ if ! type vi > /dev/null; then
 fi
 
 ## bat as manpager
+export MANROFFOPT='-c'
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 function rename_wezterm_title {
