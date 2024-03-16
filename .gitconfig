@@ -91,3 +91,6 @@
 	autoSetupRemote = true
 [http]
 	postBuffer = 524288000
+[rerere]
+	enabled = true
+	autoupdate = true
