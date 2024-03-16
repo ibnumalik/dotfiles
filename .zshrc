@@ -148,3 +148,15 @@ function delete_branch_bulk {
 export EDITOR=vim
 
 #set +x
+
+# pnpm
+if [ -d /home/ibnumalik/.local/share/pnpm ]; then
+  export PNPM_HOME="/home/ibnumalik/.local/share/pnpm"
+  export PATH="$PNPM_HOME:$PATH"
+fi
+# pnpm end
+
+
+if [ -d /home/ibnumalik/.config/broot/launcher/bash ]; then
+  source /home/ibnumalik/.config/broot/launcher/bash/br
+fi
